@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suma</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="num1">Número 1:</label>
+        <input type="number" name="num1">
+        <br>
+        <label for="num2">Número 2:</label>
+        <input type="number" name="num2">
+        <br>
+        <button type="submit">Sumar</button>
+    </form>
+    {% if resultado %}
+        <p>El resultado de la suma es: {{ resultado }}</p>
+    {% endif %}
+</body>
+</html>
